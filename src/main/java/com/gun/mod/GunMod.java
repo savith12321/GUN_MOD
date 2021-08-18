@@ -1,5 +1,6 @@
 package com.gun.mod;
 
+import com.gun.mod.util.RegistryHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -14,6 +15,7 @@ public class GunMod
     public static final String MOD_ID = "gm";
     public GunMod() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        RegistryHandler.init();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
